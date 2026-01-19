@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You </title>
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: url("image.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* dark overlay for readability */
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(90, 40, 120, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* glass box */
+.thank-box {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 320px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.thank-box h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.thank-box p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* button */
+.thank-box button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #a855f7;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.thank-box button:hover {
+  background: #9333ea;
+  transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="thank-box">
+            <h1>Thank You🪻🤗 </h1>
+            <p>Your Kindness means more than words can say.🤗 <br> I truly appreciate you 🌸</p>
+            <button onclick="goBack()"> Go Back</button>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

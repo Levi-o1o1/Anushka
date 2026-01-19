@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I Am Sorry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://i.pinimg.com/originals/1a/9e/16/1a9e16b9f8ea2bb978255129368d1f59.gif') repeat;
+      font-family: 'Patrick Hand', cursive;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .message-box {
+      background: rgba(255, 255, 255, 0.9); 
+      padding: 40px;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      animation: floatIn 1.5s ease;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #ff4b5c;
+      margin: 0 0 20px 0;
+      animation: popIn 1.2s ease;
+    }
+
+    img {
+      width: 150px;
+      animation: pulse 2s infinite;
+    }
+
+    button {
+      margin-top: 30px;
+      background-color: #ff4b5c;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+      margin: 0 8px;
+      
+      
+    }
+
+    button:hover {
+      background-color: #e63946;
+    }
+
+    p {
+      margin-top: 25px;
+      color: black;
+      font-size: 1.6rem;
+      /* display: none; */
+
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes floatIn {
+      0% { transform: translateY(100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.6); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .pop {
+        animation: pop 0.6s ease;
+    }
+    @keyframes pop {
+        0%{
+            transform: scale(1);
+        }
+        40% {
+            transform: sclae(1.3) rotate(5deg);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    #no {
+        position: absolute;
+        transition: 0.15s ease;
+    }
+    /* .btn-group{
+        display: flex;
+        gap: 30px;
+        justify-content: space-around;
+
+    } */
+  </style>
+</head>
+<body>
+
+  <div class="message-box">
+    <img src="https://media.tenor.com/GAnWQh5LnF0AAAAM/love.gif" alt="cute romantic sorry gif">
+
+
+     <h1>I’m really, really sorry 😢</h1>
+     
+    
+    <p>Did you forgive me ? </p>
+      <div class="btn-group">  
+       <button id="funbtn">Yes</button>
+        <button id="no">No</button>
+     </div>
+  </div>
+
+
+
+  <script>
+    const btn=document.getElementById("funbtn")
+      btn.addEventListener("click", () =>{
+        btn.innerText= "Yes I Know It !𓂃˖˳·˖ ִֶָ ⋆🌷͙⋆ ִֶָ˖·˳˖𓂃 ִֶָ";
+        btn.classList.add("pop");
+
+        setTimeout(() => {
+            window.location.href = "index2.html";
+        }, 800);
+      });
+    function showMessage() {
+      document.getElementById('message').style.display = 'block';
+    }
+  </script>
+  <script>
+    const noBtn = document.getElementById("no");
+    document.addEventListener("mousemove", (e) => {
+    const btnRect = noBtn.getBoundingClientRect();
+    const btnX = btnRect.left + btnRect.width / 2;
+    const btny = btnRect.top + btnRect.height / 2;
+
+    // const dx = btnX - e.clientX;
+    // const dy = btny - e.clientY;
+
+    const distance = Math.hypot(
+        e.clientX - btnX,
+        e.clientY - btny
+    );
+  
+    
+
+ if(distance < 80){
+    const X = Math.random() * 200;
+    const Y = Math.random() * 200;
+
+    noBtn.style.left = X + "px";
+    noBtn.style.top = Y + "px";
+    }
+ });
+    
+  </script>
+</body>
+</html>
